@@ -20,13 +20,13 @@ test("Return sum for num2 >=1000" , ()=>{
     expect(sumProcess(5,7,4,4,7,8,9,10,6)).toBe(60)
 })
 
-// test("Return sum for num1 <0" , ()=>{
-//     expect(sumProcess(-5,6)).toThrow(
-//         'negatives not allowed',
-//       );
-// })
-// test("Return sum for num2 <0" , ()=>{
-//     expect(sumProcess(6,-5)).toThrow();
-// })
-
-
+test("Return sum for num1 <0" , ()=>{
+    expect(() => {
+        sumProcess(6,-5)
+      }).toThrow();
+})
+test("Return sum for num1 <0" , ()=>{
+    expect(() => {
+        sumProcess(-6,5)
+      }).toThrow();
+})
