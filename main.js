@@ -17,7 +17,6 @@ function convertingNums(num){
     if(num =="")return 0;
     if(num <0) {
         negativeNums.push(num)
-        // 
     }
     return Number(num)
 }
