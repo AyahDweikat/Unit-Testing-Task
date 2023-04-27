@@ -1,27 +1,32 @@
-const addTwoNums = require('./main')
+const sumProcess = require('./main')
 
 test("Return sum for num1 =''" , ()=>{
-    expect(addTwoNums("", 5)).toBe(5)
+    expect(sumProcess("", 5)).toBe(5)
 })
 test("Return sum for num2 =''" , ()=>{
-    expect(addTwoNums(5, "")).toBe(5)
+    expect(sumProcess(5, "")).toBe(5)
 })
 
-// test("Return sum for num1 >=1000" , ()=>{
-//     expect(addTwoNums(1001, 5)).toBe(5)
-// })
-// test("Return sum for num2 >=1000" , ()=>{
-//     expect(addTwoNums(5, 1005)).toBe(5)
-// })
+test("Return sum for num1 >=1000" , ()=>{
+    expect(sumProcess(1001, 5)).toBe(5)
+})
+test("Return sum for num2 >=1000" , ()=>{
+    expect(sumProcess(5, 1005)).toBe(5)
+})
+test("Return sum for num2 >=1000" , ()=>{
+    expect(sumProcess(5, 5)).toBe(10)
+})
+test("Return sum for num2 >=1000" , ()=>{
+    expect(sumProcess(5,7,4,4,7,8,9,10,6)).toBe(60)
+})
 
 // test("Return sum for num1 <0" , ()=>{
-//     expect(addTwoNums(-5,6)).rejects.toThrow(
+//     expect(sumProcess(-5,6)).toThrow(
 //         'negatives not allowed',
 //       );
 // })
 // test("Return sum for num2 <0" , ()=>{
-//     expect(addTwoNums(6,-5)).rejects.toThrow(
-//         'negatives not allowed',
-//       );
+//     expect(sumProcess(6,-5)).toThrow();
 // })
+
 
